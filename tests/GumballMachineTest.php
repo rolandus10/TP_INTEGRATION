@@ -63,7 +63,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
     public function testAffichageCoursAVI()
     {
-        /*� completer*/
+        $this->assertEquals(true,$this->gumballMachineInstance->AffichageProf("Before Insertion of Cours"));
     }
     public function testInsertC()
     {
