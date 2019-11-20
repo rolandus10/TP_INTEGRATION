@@ -6,11 +6,11 @@ class GumballMachine
 	private $gumballs;
 	
 	private $bdd;
-	/* Paramètre de connexion à la base de données*/
+	/* Paramï¿½tre de connexion ï¿½ la base de donnï¿½es*/
 	private $servername="localhost";
-	private $db_name="mydb1"; //a remplir
-	private $db_user="myuser1"; //a remplir
-	private $db_pass="mypassword1"; //a remplir
+	private $db_name="mydb17"; //a remplir
+	private $db_user="myuser17"; //a remplir
+	private $db_pass="mypassword17"; //a remplir
 	
 	
 	function __construct()
@@ -107,6 +107,14 @@ class GumballMachine
 	    }
 	    
 	}
+	public function GetLastIDC()
+    {
+        $stmt = $this->bdd->prepare("select max(id) as maximum from cours");
+        $stmt->execute();
+        $cour = $stmt->fetch();
+        return $cour['maximum'];
+    }
+
 	
 	public function UpdateP()
 	{
